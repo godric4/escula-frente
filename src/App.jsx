@@ -21,7 +21,7 @@ const App = () => {
           <Routes>
             <Route element={<Layout />}>
               <Route path='/' element={<Navigate to='/dashboard' replace />} />
-              <Route path='/dashboad' element={<Dashboard />} />
+              <Route path='/dashboard' element={<Dashboard />} />
             </Route>
           </Routes>
         </ThemeProvider>
