@@ -1,41 +1,8 @@
-export const darkTokens = {
-  grey: {
-    0: '#ffffff', // manually adjusted
-    10: '#f6f6f6', // manually adjusted
-    50: '#f0f0f0', // manually adjusted
-    100: '#e0e0e0',
-    200: '#c2c2c2',
-    300: '#a3a3a3',
-    400: '#858585',
-    500: '#666666',
-    600: '#525252',
-    700: '#3d3d3d',
-    800: '#292929',
-    900: '#141414',
-    1000: '#000000', // manually adjusted
-  },
-  primary: {
-    100: '#d9cdcd',
-    200: '#b39a9a',
-    300: '#8d6868',
-    400: '#673535',
-    500: '#410303',
-    600: '#340202',
-    700: '#270202',
-    800: '#1a0101',
-    900: '#0d0101',
-  },
+import { configureStore } from '@reduxjs/toolkit';
+import themeReducer from './features/themeSlice';
 
-  secondary: {
-    50: '#f0f0f0',
-    100: '#e9e2d0',
-    200: '#d3c5a1',
-    300: '#bda971',
-    400: '#a78c42',
-    500: '#916f13',
-    600: '#74590f',
-    700: '#57430b',
-    800: '#3a2c08',
-    900: '#1d1604',
+export const store = configureStore({
+  reducer: {
+    globalTheme: themeReducer,
   },
-};
+});
